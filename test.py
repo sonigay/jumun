@@ -66,7 +66,7 @@ async def on_message(message):
         embed = discord.Embed(
             title = ":keyboard: 명령어",
             description= '```' + command_list + '```',
-            color=0xffffff
+            color=0xFFD5B4
             )
         embed.add_field(
             name=":radio: 기타채널 명령어 ",
