@@ -45,6 +45,34 @@ async def on_message(message):
     if message.content.startswith('!답변'):
             member = discord.utils.get(client.get_all_members(), id=message.content[4:22])
             await client.send_message(member, "홍팀장 개인답변 : " + message.content[23:])
+            
+            
+    if message.content == '!명령어':
+        command_list = ''
+        command_list += '!모델명\n'     #!모델명
+        command_list += '!재고 [모델명]\n'     #!재고+모델명
+        command_list += '!재고 [구단위]\n'     #!재고+구단위
+        command_list += '!퀵비 [동단위/동단위]\n'     #!퀵비
+        command_list += '!동판 [동판신규]\n'     #!동판
+        command_list += '!동판 [동판기변]\n'     #!동판
+        command_list += '!동판 [소호신규]\n'     #!동판
+        command_list += '!동판 [소호기변]\n'     #!동판
+        command_list += '!동판 [후결합]\n'     #!동판
+        command_list += '!동판 [재약정기존]\n'     #!동판
+        command_list += '!동판 [재약정전환]\n'     #!동판
+        command_list += '!동판 [재약정단독기존]\n'     #!동판
+        command_list += '!동판 [재약정단독전환]\n'     #!동판
+        command_list += '!동판 [단독]\n'     #!동판
+        embed = discord.Embed(
+            title = ":keyboard: 명령어",
+            description= '```' + command_list + '```',
+            color=0xff00ff
+            )
+        embed.add_field(
+            name=":radio: 기타채널 명령어 ",
+            value= '```재고신청봇 개인메시지 !주문 주문내용\n무선정책조회 !단가 [모델명][요금제군][유형]\n외국인정책조회 !외국인단가 [모델명][요금제군][유형]\n```'
+            )
+        await client.send_message(message.channel, embed=embed)
 
                         
 access_token = os.environ["BOT_TOKEN"]
