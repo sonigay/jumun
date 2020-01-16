@@ -32,16 +32,16 @@ async def on_ready():
 async def on_message(message):
     
     if message.content.startswith('!주문'):
-        if message.channel.is_private and message.author.id != "538289410018639893":
+        if message.channel.is_private and message.author.id != "667338660420780032":
             await client.send_message(discord.utils.get(client.get_all_members(), id="315237238940106754"), message.author.name + "(" + message.author.id + ") : " + message.content[4:] + " 주문이 완료 되었습니다. 부득이 한경우 개인답변 드리도록 하겠습니다.")
                         
     if message.content.startswith('!주문'):
-        if message.channel.is_private and message.author.id != "538289410018639893":
+        if message.channel.is_private and message.author.id != "667338660420780032":
             sheet1.insert_row([message.author.display_name, message.content[4:]], 3)
-            await client.send_message(client.get_channel("661768769131249667"), message.author.display_name + "(" + message.author.id + ") : " + message.content[4:])
+            await client.send_message(client.get_channel("667343258296254464"), message.author.display_name + "(" + message.author.id + ") : " + message.content[4:])
            
             
-    if message.content.startswith("!답변"):
+    if message.content.startswith('!답변'):
             member = discord.utils.get(client.get_all_members(), id=message.content[4:22])
             await client.send_message(member, "홍팀장 개인답변 : " + message.content[23:])
 
