@@ -34,7 +34,8 @@ async def on_message(message):
     if message.content.startswith('!주문'):
         if message.channel.is_private and message.author.id != "667338660420780032":
             await client.send_message(discord.utils.get(client.get_all_members(), id="315237238940106754"), message.author.name + "(" + message.author.id + ") : " + message.content[4:] + " 주문이 접수되었습니다.")
-                        
+            await client.send_message(message.channel, '주문이 정상적으로 접수되었습니다. \n부득이한경우 개인답변 드리겠습니다.')
+            
     if message.content.startswith('!주문'):
         if message.channel.is_private and message.author.id != "667338660420780032":
             sheet3.insert_row([message.author.display_name, message.content[4:]], 3)
