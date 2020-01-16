@@ -11,7 +11,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name('jungsanfile-e5ae2dbc88
 client = gspread.authorize(creds)
 doc = client.open_by_url('https://docs.google.com/spreadsheets/d/15p6G4jXmHw7Z_iRCYeFwRzkzLxqf-3Pj0c6FeVuFYBM/edit#gid=0')
 
-sheet1 = doc.worksheet('재고주문')
+sheet3 = doc.worksheet('재고주문')
 
 
 client = discord.Client()
@@ -37,7 +37,7 @@ async def on_message(message):
                         
     if message.content.startswith('!주문'):
         if message.channel.is_private and message.author.id != "667338660420780032":
-            sheet1.insert_row([message.author.display_name, message.content[4:]], 3)
+            sheet3.insert_row([message.author.display_name, message.content[4:]], 3)
             await client.send_message(client.get_channel("667343258296254464"), message.author.display_name + "(" + message.author.id + ") : " + message.content[4:])
            
             
