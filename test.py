@@ -70,7 +70,7 @@ async def on_message(message):
             )
         embed.add_field(
             name=":radio: 기타채널 명령어 ",
-            value= '```재고신청봇 개인메시지 !주문 주문내용\n무선정책조회 !단가 [모델명][요금제군][유형]\n외국인정책조회 !외국인단가 [모델명][요금제군][유형]\n```'
+            value= '```!주문 주문내용 채널:재고신청봇 개인메시지 \n!단가 [모델명][요금제군][유형] 채널:무선정책조회\n!외국인단가 [모델명][요금제군][유형] 채널:외국인정책조회\n```'
             )
         await client.send_message(message.channel, embed=embed)
 
