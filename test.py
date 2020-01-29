@@ -55,7 +55,7 @@ async def on_message(message):
 		
     if message.content == '!정책표':
         command_list = ''
-        command_list += 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmWzJs5QX3i2Q5LaOugdA7NoxLZ3O_fQZAyYMejopSp0u-nuoe9iaQREswxmanQSbXs1Swm_ukKaJ7/pubhtml#\n'     #!모델명
+        command_list += 'http://bit.ly/cellphone_price'     #!모델명
         embed = discord.Embed(
             title = ":bar_chart: 정책표링크",
             description= '```' + command_list + '```',
