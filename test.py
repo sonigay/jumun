@@ -49,13 +49,14 @@ async def on_message(message):
             
 		
     if message.content == '!정책표':
-        command_list = ''
-        command_list += 'http://bit.ly/cellphone_price'     #!모델명
-        embed = discord.Embed(
-            title = ":bar_chart: 정책표링크",
-            description= '```' + command_list + '```',
-            color=0xFFD5B4
-            )
+       # command_list = ''
+        #command_list += 'http://bit.ly/cellphone_price'     #!모델명
+       # embed = discord.Embed(
+        #    title = ":bar_chart: 정책표링크",
+         #   description= '```' + command_list + '```',
+          #  color=0xFFD5B4
+           # )
+        embed.add_field('http://bit.ly/cellphone_price')
         await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : 정책표출력!! " + message.content[4:])
         await client.send_message(message.channel, embed=embed)
             
