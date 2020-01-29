@@ -53,7 +53,7 @@ async def on_message(message):
         command_list += 'http://bit.ly/cellphone_price'     #!모델명
         embed = discord.Embed(
             title = ":bar_chart: 정책표링크",
-            description= '```' + command_list + '```',
+            description= command_list,
             color=0xFFD5B4
             )
         embed.add_field(
