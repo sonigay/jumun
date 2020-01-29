@@ -43,7 +43,7 @@ async def on_message(message):
             
 	
     if message.content.startswith('!답변'):
-        member = discord.utils.get(client.get_all_members(), id=message.content[4:22])
+        member = discord.utils.get(client.get_all_channel(), id=message.content[4:22])
         await client.send_message(member, "홍팀장 개인답변 : " + message.content[23:])
             
             
@@ -56,7 +56,9 @@ async def on_message(message):
             description= '```' + command_list + '```',
             color=0xFFD5B4
             )
-        embed.add_field('http://bit.ly/cellphone_price')
+        embed.add_field(
+            value= 'http://bit.ly/cellphone_price'
+            )
         await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : 정책표출력!! " + message.content[4:])
         await client.send_message(message.channel, embed=embed)
             
