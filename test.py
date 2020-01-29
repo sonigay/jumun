@@ -58,6 +58,7 @@ async def on_message(message):
 		title = ":bar_chart: 정책표링크",
 		description= '```' + command_list + '```',
 		color=0xFFD5B4
+		)
 	await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : " + message.content[4:], embed=embed)
             
  
