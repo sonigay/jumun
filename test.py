@@ -5,18 +5,12 @@ import os
 import datetime
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 creds = ServiceAccountCredentials.from_json_keyfile_name('jumun-8151173be58f.json', scope)
 client = gspread.authorize(creds)
 doc = client.open_by_url('https://docs.google.com/spreadsheets/d/15p6G4jXmHw7Z_iRCYeFwRzkzLxqf-3Pj0c6FeVuFYBM')
-
 sheet1 = doc.worksheet('재고주문')
-
-
 client = discord.Client()
-
-
 @client.event
 async def on_ready():
     print("login")
@@ -24,10 +18,6 @@ async def on_ready():
     print(client.user.id)
     print("----------------")
     await client.change_presence(game=discord.Game(name='메세지 전달', type=1))
-
-
-
-
 @client.event
 async def on_message(message):
     global gc #정산
@@ -44,13 +34,26 @@ async def on_message(message):
 	
     if message.content.startswith('!답변'):
         member = discord.utils.get(client.get_all_channels(), id=message.content[4:22])
-        result = message.content[23:]
+        await client.send_message(member, "홍팀장 답변 : " + message.content[23:])
+            
+            
+		
+    if message.content == '!정책표':
+        command_list = ''
+        command_list += 'http://bit.ly/cellphone_price'     #!모델명
         embed = discord.Embed(
-                title = " 홍팀장답변 ",
-                description= '```' + result + '```',
-        await client.send_message(member, embed=embed)
+            title = ":bar_chart: 정책표링크",
+            description= command_list,
+            color=0xFFD5B4
+            )
+        embed.add_field(
+            name="정책표 적용시간 확인후 새로고침해주세요 ",
+            value= ''
+            )
+        await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : 정책표출력!! " + message.content[4:])
+        await client.send_message(message.channel, embed=embed)
 
-
+ 
                         
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
