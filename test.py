@@ -52,7 +52,7 @@ async def on_message(message):
             await client.send_message(member, "홍팀장 개인답변 : " + message.content[23:])
             
     if message.content.startswith('!정책표'):
-        webdriver.Chrome.open_new("https://docs.google.com/spreadsheets/d/e/2PACX-1vTmWzJs5QX3i2Q5LaOugdA7NoxLZ3O_fQZAyYMejopSp0u-nuoe9iaQREswxmanQSbXs1Swm_ukKaJ7/pubhtml")
+        webdriver.Chrome.("https://docs.google.com/spreadsheets/d/e/2PACX-1vTmWzJs5QX3i2Q5LaOugdA7NoxLZ3O_fQZAyYMejopSp0u-nuoe9iaQREswxmanQSbXs1Swm_ukKaJ7/pubhtml")
         await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : " + message.content[4:])
             
  
