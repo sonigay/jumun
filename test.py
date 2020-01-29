@@ -51,9 +51,7 @@ async def on_message(message):
         await client.send_message(member, embed=embed)
 
 		
-		
-		
-		
+
 @client.event
 async def on_message(message):
 		
