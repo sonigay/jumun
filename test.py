@@ -40,7 +40,7 @@ async def on_message(message):
 		
     if message.content == '!정책표':
         command_list = ''
-        command_list += 'http://bit.ly/cellphone_price'     #!링크
+        command_list += 'https://bit.ly/cellphone_price'     #!링크
         embed = discord.Embed(
             title = ":bar_chart: 정책표링크",
             description= command_list,
