@@ -37,7 +37,7 @@ async def on_message(message):
         embed = discord.Embed(
             title = "홍팀장 재고주문 답변",
             description= '```' + message.content[23:] + ```',
-            color=0xFFD5B4
+            color=0xFF0000
 	    )
         await client.send_message(member, embed=embed)
             
@@ -49,7 +49,7 @@ async def on_message(message):
         embed = discord.Embed(
             title = ":bar_chart: 정책표링크",
             description= command_list,
-            color=0xFFD5B4
+            color=0xf29886
             )
         await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + message.channel.name + ") : 정책표출력!! " + message.content[4:])
         await client.send_message(message.channel, embed=embed)
