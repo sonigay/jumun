@@ -61,7 +61,8 @@ async def on_message(message):
             description= '```' + command_list + '```',
             color=0xFFD5B4
             )
-        await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : " + message.content[4:], embed=embed)
+        await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : 정책표출력!! " + message.content[4:])
+	await client.send_message(client.channel, embed=embed)
             
  
 
