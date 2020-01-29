@@ -34,7 +34,12 @@ async def on_message(message):
 	
     if message.content.startswith('!답변'):
         member = discord.utils.get(client.get_all_channels(), id=message.content[4:22])
-        await client.send_message(member, "홍팀장 답변 : " + message.content[23:])
+        embed = discord.Embed(
+            title = "홍팀장 재고주문 답변",
+            description= message.content[23:],
+            color=0xFFD5B4
+	    )
+        await client.send_message(member, embed=embed)
             
             
 		
