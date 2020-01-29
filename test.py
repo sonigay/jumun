@@ -44,10 +44,10 @@ async def on_message(message):
 	
     if message.content.startswith('!답변'):
         member = discord.utils.get(client.get_all_channels(), id=message.content[4:22])
-	result = message.content[23:]
-	embed = discord.Embed(
-		title = "홍팀장답변",
-		description= '```' + result + '```',
+        result = message.content[23:]
+        embed = discord.Embed(
+                title = "홍팀장답변",
+                description= '```' + result + '```',
         await client.send_message(member, embed=embed)
             
             
