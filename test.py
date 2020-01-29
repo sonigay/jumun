@@ -46,12 +46,10 @@ async def on_message(message):
         member = discord.utils.get(client.get_all_channels(), id=message.content[4:22])
         result = message.content[23:]
         embed = discord.Embed(
-                title = "홍팀장답변",
+                title = " 홍팀장답변 ",
                 description= '```' + result + '```',
         await client.send_message(member, embed=embed)
-            
-            
-		
+
     if message.content == '!정책표':
         command_list = ''
         command_list += 'http://bit.ly/cellphone_price'     #!모델명
@@ -62,7 +60,7 @@ async def on_message(message):
             )
         embed.add_field(
             name="정책표 적용시간 확인후 새로고침해주세요 ",
-            value= ''
+            value= ' '
             )
         await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : 정책표출력!! " + message.content[4:])
         await client.send_message(message.channel, embed=embed)
