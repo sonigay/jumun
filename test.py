@@ -56,10 +56,6 @@ async def on_message(message):
             description= command_list,
             color=0xFFD5B4
             )
-        embed.add_field(
-            name=":radio: 업무외지원 명령어 ",
-            value= 'http://bit.ly/cellphone_price'
-            )
         await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : 정책표출력!! " + message.content[4:])
         await client.send_message(message.channel, embed=embed)
             
