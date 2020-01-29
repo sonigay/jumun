@@ -50,23 +50,6 @@ async def on_message(message):
                 description= '```' + result + '```',
         await client.send_message(member, embed=embed)
 
-		
-
-    if message.content == '!정책표':
-        command_list = ''
-        command_list += 'http://bit.ly/cellphone_price'     #!링크
-        embed = discord.Embed(
-            title = ":bar_chart: 정책표링크",
-            description= command_list,
-            color=0xFFD5B4
-            )
-        embed.add_field(
-            name="정책표 적용시간 확인후 새로고침해주세요 ",
-            )
-        await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : 정책표출력!! " + message.content[4:])
-        await client.send_message(message.channel, embed=embed)
-            
- 
 
                         
 access_token = os.environ["BOT_TOKEN"]
