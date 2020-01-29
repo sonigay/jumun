@@ -35,12 +35,11 @@ async def on_message(message):
     
    
     if message.content.startswith('!주문'):
-        if message.channel.is_private and message.author.id != "667338660420780032":
-            gc = gspread.authorize(creds)
-            wks = gc.open('오전재고').worksheet('재고주문')
-            wks.insert_row([message.author.display_name, message.content[4:]], 3)
-            await client.send_message(discord.utils.get(client.get_all_members(), id="315237238940106754"), message.author.name + "(" + message.author.id + ") : " + message.content[4:] + " 주문이 접수되었습니다. 부득이한경우 개인답변 드리겠습니다.")
-            await client.send_message(client.get_channel("667343258296254464"), message.author.display_name + "(" + message.author.id + ") : " + message.content[4:])
+        gc = gspread.authorize(creds)
+        wks = gc.open('오전재고').worksheet('재고주문')
+        wks.insert_row([message.author.display_name, message.content[4:]], 3)
+        await client.send_message(message.channel, message.author.name + "(" + message.author.id + ") : " + message.content[4:] + " 주문이 접수되었습니다. 부득이한경우 개인답변 드리겠습니다.")
+        await client.send_message(client.get_channel("667343258296254464"), message.author.display_name + "(" + message.author.id + ") : " + message.content[4:])
             
 	
     if message.content.startswith('!답변'):
