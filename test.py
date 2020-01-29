@@ -38,8 +38,8 @@ async def on_message(message):
         gc = gspread.authorize(creds)
         wks = gc.open('오전재고').worksheet('재고주문')
         wks.insert_row([message.author.display_name, message.content[4:]], 3)
-        await client.send_message(message.channel, message.author.name + "(" + message.channel.id + ") : " + message.content[4:] + " 주문이 접수되었습니다. 부득이한경우 개인답변 드리겠습니다.")
-        await client.send_message(client.get_channel("667343258296254464"), message.author.display_name + "(" + message.author.id + ") : " + message.content[4:])
+        await client.send_message(message.channel, message.author.name + "님이 주문하신 : " + message.content[4:] + " 주문이 접수되었습니다. 부득이한경우 개인답변 드리겠습니다.")
+        await client.send_message(client.get_channel("667343258296254464"), message.author.display_name + "(" + message.channel.id + ") : " + message.content[4:])
             
 	
     if message.content.startswith('!답변'):
