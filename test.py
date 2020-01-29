@@ -4,7 +4,6 @@ import random
 import os
 import datetime
 import gspread
-import webbrowser
 from oauth2client.service_account import ServiceAccountCredentials
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
@@ -51,12 +50,7 @@ async def on_message(message):
             member = discord.utils.get(client.get_all_members(), id=message.content[4:22])
             await client.send_message(member, "홍팀장 개인답변 : " + message.content[23:])
             
-    
-    if message.content.startswith('!정책표'):
-            webbrowser.open_new("https://docs.google.com/spreadsheets/d/e/2PACX-1vTmWzJs5QX3i2Q5LaOugdA7NoxLZ3O_fQZAyYMejopSp0u-nuoe9iaQREswxmanQSbXs1Swm_ukKaJ7/pubhtml")
-            await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + ") : " + message.content[4:])    
-            
-
+ 
 
                         
 access_token = os.environ["BOT_TOKEN"]
