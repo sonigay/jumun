@@ -38,16 +38,16 @@ async def on_message(message):
             value= '```주문내용이 전달되어 정상적으로\n접수되었습니다. 부득이한경우\n개인답변 드리겠습니다.```'
             )
         embed2 = discord.Embed(
-            title = message.author.name + " 님의 주문 ",
+            title = message.author.display_name + " 님의 주문 ",
             description= '```' + message.content[4:] + '```',
-            color=0xf29886
+            color=0xCBFF75
             )
         embed2.add_field(
-            name=" 주문접수 확인... ",
-            value= '```주문내용이 전달되어 정상 접수되었습니다.\n부득이한경우 개인답변 드리겠습니다.```'
+            name=" 주문요청... ",
+            value= '```' "거래처:"+ message.channel.name +"\n채널아이디:" + message.channel.id + '```'
             )
         await client.send_message(message.channel, embed=embed1)
-        await client.send_message(message.channel, embed=embed2)
+        await client.send_message(client.get_channel("667343258296254464"), embed=embed2)
         await client.send_message(client.get_channel("667343258296254464"), message.author.display_name + "(" + message.channel.name + message.channel.id + ") : " + message.content[4:] + " 주문요청!! ")
             
 	
