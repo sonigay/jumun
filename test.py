@@ -25,11 +25,11 @@ async def on_message(message):
     
    
     if message.content.startswith('!주문'):
-        dt = datetime.datetime.today()
-        dt1 = dt.utcfromtimestamp(float(dt.strftime('%s')))
+        now = datetime.datetime.now()
+        nowdt = now.strftime('%Y-%m-%d %H:%M:%S')
         gc = gspread.authorize(creds)
         wks = gc.open('오전재고').worksheet('재고주문')
-        wks.insert_row([dt1, message.author.display_name, message.content[4:]], 3)
+        wks.insert_row([nowdt, message.author.display_name, message.content[4:]], 3)
         embed1 = discord.Embed(
             title = message.author.display_name + "님 의 주문 ",
             description= '```' + message.content[4:] + '```',
