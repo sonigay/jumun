@@ -25,7 +25,7 @@ async def on_message(message):
     
    
     if message.content.startswith('!주문'):
-        now = datetime.datetime.now(timezone.utc)
+        now = datetime.now(timezone.utc)
         now.astimezone()
         nowdt = now.strftime('%Y년%m월%d일 %H시%M분%S초')
         gc = gspread.authorize(creds)
