@@ -29,7 +29,7 @@ async def on_message(message):
         wks = gc.open('오전재고').worksheet('재고주문')
         wks.insert_row([message.author.display_name, message.content[4:]], 3)
         embed1 = discord.Embed(
-            title = message.author.name + " 님의 주문 ",
+            title = message.author.display_name + " 님의 주문 ",
             description= '```' + message.content[4:] + '```',
             color=0xCBFF75
             )
