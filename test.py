@@ -29,7 +29,7 @@ async def on_message(message):
         wks = gc.open('오전재고').worksheet('재고주문')
         wks.insert_row([message.author.display_name, message.content[4:]], 3)
         embed1 = discord.Embed(
-            title = message.author.display_name + " 님의 주문 ",
+            title = message.author.display_name + "님 의 주문 ",
             description= '```' + message.content[4:] + '```',
             color=0xCBFF75
             )
@@ -38,7 +38,7 @@ async def on_message(message):
             value= '```주문내용이 전달되어 정상적으로\n접수되었습니다. 부득이한경우\n개인답변 드리겠습니다.```'
             )
         embed2 = discord.Embed(
-            title = message.author.display_name + " 님의 주문내용 ",
+            title = message.author.display_name + "님 의 주문내용 ",
             description= '```' + message.content[4:] + '```',
             color=0xCBFF75
             )
