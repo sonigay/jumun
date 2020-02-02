@@ -2,7 +2,7 @@ import discord
 import asyncio
 import random
 import os
-import datetime
+from datetime import timezone, timedelta, datetime
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
