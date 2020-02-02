@@ -31,7 +31,7 @@ async def on_message(message):
         embed1 = discord.Embed(
             title = message.author.name + " 님의 주문 ",
             description= '```' + message.content[4:] + '```',
-            color=0xf29886
+            color=0xCBFF75
             )
         embed1.add_field(
             name=" 주문접수 확인... ",
