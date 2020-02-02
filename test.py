@@ -36,7 +36,7 @@ async def on_message(message):
     embed.add_field(
         name=" 주문이 정상 접수되었습니다.\n 부득이한경우 개인답변 드리겠습니다. "
         )
-    await client.send_message(message.channel, embed=embed)
+        await client.send_message(message.channel, embed=embed)
         await client.send_message(message.channel, message.author.name + " 님이 주문하신 ( " + message.content[4:] + ") 주문이 접수되었습니다. 부득이한경우 개인답변 드리겠습니다.")
         await client.send_message(client.get_channel("667343258296254464"), message.author.display_name + "(" + message.channel.name + message.channel.id + ") : " + message.content[4:] + " 주문요청!! ")
             
