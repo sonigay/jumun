@@ -35,7 +35,7 @@ async def on_message(message):
             )
         embed1.add_field(
             name=" 주문접수 확인... ",
-            value= '```주문내용이 전달되어 정상 접수되었습니다.\n 부득이한경우 개인답변 드리겠습니다.```'
+            value= '```주문내용이 전달되어 정상 접수되었습니다.\n부득이한경우 개인답변 드리겠습니다.```'
             )
         embed2 = discord.Embed(
             title = message.author.name + " 님의 주문 ",
@@ -44,7 +44,7 @@ async def on_message(message):
             )
         embed2.add_field(
             name=" 주문접수 확인... ",
-            value= '```주문내용이 전달되어 정상 접수되었습니다.\n 부득이한경우 개인답변 드리겠습니다.```'
+            value= '```주문내용이 전달되어 정상 접수되었습니다.\n부득이한경우 개인답변 드리겠습니다.```'
             )
         await client.send_message(message.channel, embed=embed1)
         await client.send_message(message.channel, embed=embed2)
