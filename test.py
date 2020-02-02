@@ -4,6 +4,7 @@ import random
 import os
 from datetime import timezone, timedelta, datetime
 import time
+import arrow
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
@@ -26,10 +27,9 @@ async def on_message(message):
     
    
     if message.content.startswith('!주문'):
-        now = datetime.datetime.strftime('%Y년%m월%d일 %H시%M분%S초')
-        now = now.replace(tzinfo=datetime.timezone.utc)
-        now = now.astimezone()
-        nowdt = now.strftime("%d %b %Y (%I:%M:%S:%f %p) %Z")
+        now = datetime.utcnow()
+        nowdt = arrow.get(now).to('local').format()
+       # nowst = datetime.datetime.strftime('%Y년%m월%d일 %H시%M분%S초')
         gc = gspread.authorize(creds)
         wks = gc.open('오전재고').worksheet('재고주문')
         wks.insert_row([nowdt, message.author.display_name, message.content[4:]], 3)
