@@ -34,7 +34,7 @@ async def on_message(message):
             color=0xf29886
             )
         embed.add_field(
-            name=" 주문접수 확인... "
+            name=" 주문접수 확인... ",
             value= '```주문내용이 전달되어 정상 접수되었습니다.\n 부득이한경우 개인답변 드리겠습니다.```'
             )
         await client.send_message(message.channel, embed=embed)
