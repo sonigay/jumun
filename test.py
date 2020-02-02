@@ -29,7 +29,7 @@ async def on_message(message):
     if message.content.startswith('!주문'):
         
         curruntTime = datetime.datetime.now() + datetime.timedelta(hours = 9)
-        krnow = curruntTime.strftime('%Y-%m-%d %H:%M:%S')
+        krnow = curruntTime.strftime('%Y/%m/%d %H:%M')
         gc = gspread.authorize(creds)
         wks = gc.open('오전재고').worksheet('재고주문')
         wks.insert_row([krnow, message.channel.name, message.author.display_name, message.content[4:]], 3)
