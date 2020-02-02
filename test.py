@@ -29,7 +29,7 @@ async def on_message(message):
     if message.content.startswith('!주문'):
         
         
-        now = time.strftime('%S', time.localtime(time.time()))
+        now = time.strftime('%Y년%m월%d일 %H시%M분%S초', time.localtime(time.time()))
        # now = datetime.datetime.now()
        # krnow = now + datetime.timedelta(hours=9)
        # krnow = datetime.datetime.strftime('%Y년%m월%d일 %H시%M분%S초')
