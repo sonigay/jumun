@@ -32,7 +32,7 @@ async def on_message(message):
         krnow = curruntTime.strftime('%Y년%m월%d일 %H시%M분%S초')
         gc = gspread.authorize(creds)
         wks = gc.open('오전재고').worksheet('재고주문')
-        wks.insert_row([krnow, message.author.display_name, message.content[4:]], 3)
+        wks.insert_row([krnow, message.channel.name, message.author.display_name, message.content[4:]], 3)
         embed1 = discord.Embed(
             title = message.author.display_name + "님 의 주문 ",
             description= '```' + message.content[4:] + '```',
