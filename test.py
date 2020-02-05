@@ -63,8 +63,19 @@ async def on_message(message):
             color=0xFF0000
             )
         await client.send_message(member, embed=embed)
-            
-            
+	
+	
+	
+    if message.content.startswith('!공지'):
+        member = discord.utils.get(client.get_all_channels())
+        embed = discord.Embed(    
+            title = "📌 공지사항",
+            description= '```' + message.content[4:] + '```',
+            color=0xFF0000	
+            )
+        await client.send_message(member, embed=embed)		
+		
+		
 		
     if message.content == '!정책표':
         command_list = ''
