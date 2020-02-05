@@ -67,16 +67,68 @@ async def on_message(message):
 	
 	
     if message.content.startswith('!공지'):
-        members = discord.utils.get(client.get_all_channel(), id="667707237623660569", id="667239441307533312", id="667241204739604490", id="667241430070198273", id="667241481907470336", id="667241531694120970", id="667241582411513856", id="667241378534653983", id="667240616207450122", id="667242915378102293", id="667243361614168088", id="667243407227224064", id="667243524433117218", id="667247020926435344", id="667243630989410304", id="667243696915218432", id="667243782604849155", id="667243837206429696", id="667244790404087808", id="667244947677904898", id="667245023359664142", id="667245114619592765", id="667245155790618625", id="667245231447474176", id="667245522549211138", id="667245576014004256", id="667245650802507777", id="667245748907147275", id="667245819786690560", id="667245916947742760", id="667246076453191690", id="667246146074443807", id="667246234851082240", id="667246316652593163", id="667246366468079626", id="667246430074699777", id="667246487872339968", id="667246552238129153", id="667246600019771472", id="667246718198218772", id="667246834892144640", id="667247069580492820", id="667247107232628736", id="667247142833881108", id="667247180188483584", id="667247225847545866", id="667247261734141962", id="667247287679975446", id="667247313525407755", id="667247368902672404", id="667247397075681299", id="667247433041838100", id="667247472908828676", id="667247519264407552", id="667247545893781524")
         embed = discord.Embed(    
             title = "📌 공지사항",
             description= '```' + message.content[4:] + '```',
             color=0xFF0000	
             )
-        await client.send_message(members, embed=embed)
-		
-		
-		
+        await client.send_message(client.get_channel("667707237623660569"), embed=embed)
+        await client.send_message(client.get_channel("667239441307533312"), embed=embed)
+        await client.send_message(client.get_channel("667241204739604490"), embed=embed)
+        await client.send_message(client.get_channel("667241430070198273"), embed=embed)
+        await client.send_message(client.get_channel("667241481907470336"), embed=embed)
+        await client.send_message(client.get_channel("667241531694120970"), embed=embed)
+        await client.send_message(client.get_channel("667241582411513856"), embed=embed)
+        await client.send_message(client.get_channel("667241378534653983"), embed=embed)
+        await client.send_message(client.get_channel("667240616207450122"), embed=embed)
+        await client.send_message(client.get_channel("667242915378102293"), embed=embed)
+        await client.send_message(client.get_channel("667243361614168088"), embed=embed)
+        await client.send_message(client.get_channel("667243407227224064"), embed=embed)
+        await client.send_message(client.get_channel("667243524433117218"), embed=embed)
+        await client.send_message(client.get_channel("667247020926435344"), embed=embed)
+        await client.send_message(client.get_channel("667243630989410304"), embed=embed)
+        await client.send_message(client.get_channel("667243696915218432"), embed=embed)
+        await client.send_message(client.get_channel("667243782604849155"), embed=embed)
+        await client.send_message(client.get_channel("667243837206429696"), embed=embed)
+        await client.send_message(client.get_channel("667244790404087808"), embed=embed)
+        await client.send_message(client.get_channel("667244947677904898"), embed=embed)
+        await client.send_message(client.get_channel("667245023359664142"), embed=embed)
+        await client.send_message(client.get_channel("667245114619592765"), embed=embed)
+        await client.send_message(client.get_channel("667245155790618625"), embed=embed)
+        await client.send_message(client.get_channel("667245231447474176"), embed=embed)
+        await client.send_message(client.get_channel("667245522549211138"), embed=embed)
+        await client.send_message(client.get_channel("667245576014004256"), embed=embed)
+        await client.send_message(client.get_channel("667245650802507777"), embed=embed)
+        await client.send_message(client.get_channel("667245748907147275"), embed=embed)
+        await client.send_message(client.get_channel("667245819786690560"), embed=embed)
+        await client.send_message(client.get_channel("667245916947742760"), embed=embed)
+        await client.send_message(client.get_channel("667246076453191690"), embed=embed)
+        await client.send_message(client.get_channel("667246146074443807"), embed=embed)
+        await client.send_message(client.get_channel("667246234851082240"), embed=embed)
+        await client.send_message(client.get_channel("667246316652593163"), embed=embed)
+        await client.send_message(client.get_channel("667246366468079626"), embed=embed)
+        await client.send_message(client.get_channel("667246430074699777"), embed=embed)
+        await client.send_message(client.get_channel("667246487872339968"), embed=embed)
+        await client.send_message(client.get_channel("667246552238129153"), embed=embed)
+        await client.send_message(client.get_channel("667246600019771472"), embed=embed)
+        await client.send_message(client.get_channel("667246718198218772"), embed=embed)
+        await client.send_message(client.get_channel("667246834892144640"), embed=embed)
+        await client.send_message(client.get_channel("667247069580492820"), embed=embed)
+        await client.send_message(client.get_channel("667247107232628736"), embed=embed)
+        await client.send_message(client.get_channel("667247142833881108"), embed=embed)
+        await client.send_message(client.get_channel("667247180188483584"), embed=embed)
+        await client.send_message(client.get_channel("667247225847545866"), embed=embed)
+        await client.send_message(client.get_channel("667247261734141962"), embed=embed)
+        await client.send_message(client.get_channel("667247287679975446"), embed=embed)
+        await client.send_message(client.get_channel("667247313525407755"), embed=embed)
+        await client.send_message(client.get_channel("667247368902672404"), embed=embed)
+        await client.send_message(client.get_channel("667247397075681299"), embed=embed)
+        await client.send_message(client.get_channel("667247433041838100"), embed=embed)
+        await client.send_message(client.get_channel("667247472908828676"), embed=embed)
+        await client.send_message(client.get_channel("667247519264407552"), embed=embed)
+        await client.send_message(client.get_channel("667247545893781524"), embed=embed)
+	
+
     if message.content == '!정책표':
         command_list = ''
         command_list += 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmWzJs5QX3i2Q5LaOugdA7NoxLZ3O_fQZAyYMejopSp0u-nuoe9iaQREswxmanQSbXs1Swm_ukKaJ7/pubhtml'     #!링크
