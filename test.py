@@ -141,13 +141,18 @@ async def on_message(message):
     if message.content == '!정책표':
         command_list = ''
         command_list += 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmWzJs5QX3i2Q5LaOugdA7NoxLZ3O_fQZAyYMejopSp0u-nuoe9iaQREswxmanQSbXs1Swm_ukKaJ7/pubhtml'     #!링크
-        embed = discord.Embed(
+        embed1 = discord.Embed(
             title = ":bar_chart: 정책표링크",
             description= command_list,
             color=0xf29886
             )
-        await client.send_message(client.get_channel("672022974223876096"), message.author.display_name + "(" + message.author.id + message.channel.name + ") : 정책표출력!! " + message.content[4:])
-        await client.send_message(message.channel, embed=embed)
+        embed2 = discord.Embed(
+            title = ":bar_chart: 정책표출력!!",
+            description= '```' "출력자:" + message.author.display_name +"\n거래처:" + message.channel.name + '```',
+            color=0xf29886
+            )
+        await client.send_message(client.get_channel("672022974223876096"), embed=embed2)
+        await client.send_message(message.channel, embed=embed1)
 
  
                         
