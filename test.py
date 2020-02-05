@@ -72,7 +72,7 @@ async def on_message(message):
             description= '```' + message.content[4:] + '```',
             color=0xFF0000	
             )
-        await client.send_message(client.get_channels, embed=embed)
+        await client.send_message(client.get_all_channels, embed=embed)
 		
 		
 		
