@@ -67,13 +67,12 @@ async def on_message(message):
 	
 	
     if message.content.startswith('!공지'):
-        member = discord.utils.get(client.get_all_channels())
         embed = discord.Embed(    
             title = "📌 공지사항",
             description= '```' + message.content[4:] + '```',
             color=0xFF0000	
             )
-        await client.send_message(member, embed=embed)		
+        await client.get_all_channels(embed=embed)
 		
 		
 		
