@@ -5,7 +5,7 @@ import os
 import datetime
 import time
 import arrow
-import webbrowser
+import webbrowser as wb
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
@@ -71,7 +71,7 @@ async def on_message(message):
         command_list = ''
         command_list += 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmWzJs5QX3i2Q5LaOugdA7NoxLZ3O_fQZAyYMejopSp0u-nuoe9iaQREswxmanQSbXs1Swm_ukKaJ7/pubhtml'     #!링크
         url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmWzJs5QX3i2Q5LaOugdA7NoxLZ3O_fQZAyYMejopSp0u-nuoe9iaQREswxmanQSbXs1Swm_ukKaJ7/pubhtml'
-        webbrowser.open_new(url)
+        wb.open_new(url)
         embed = discord.Embed(
             title = ":bar_chart: 정책표링크",
             description= command_list,
