@@ -57,11 +57,20 @@ async def on_message(message):
 	
     if message.content.startswith('!답변'):
         member = discord.utils.get(client.get_all_channels(), id=message.content[4:22])
+        neyongdabtotal = message.content[23:]
+        neyongdab = neyongdabtotal.split("/")
+        neyong = neyongdab[0]
+        dab = neyongdab[1]
+	
         embed = discord.Embed(
-            title = message.author.display_name + "님 답변",
-            description= '```' + message.content[23:] + '```',
+            title = "주문내용",
+            description= '```' + neyong + '```',
             color=0xFF0000
             )
+        embed.add_field(
+            name = message.author.display_name + "님 답변",
+            value= '```' + dab + '```'
+	    )
         await client.send_message(member, embed=embed)
 	
 	
