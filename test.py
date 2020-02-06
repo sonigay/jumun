@@ -25,7 +25,25 @@ async def on_message(message):
     global gc #정산
     global creds #정산
     
-   
+
+    if message.content.startswith('!주문'):
+        gc = gspread.authorize(creds)
+        wks = gc.open('오전재고').worksheet('그레이드')
+        result = wks.acell('B1').value
+        embed1 = discord.Embed(
+            title = ' 파트너 그레이드 안내!! ',
+            description= '```' + result + ' ```',
+            color=0x7fffd4
+            )
+        embed2 = discord.Embed(
+            title = ' 파트너 그레이드 조회!! ',
+            description= '```' "출력자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
+            color=0x00ffff
+            )
+        await client.send_message(client.get_channel("674827771817623572"), embed=embed2)	
+        await client.send_message(message.channel, embed=embed1)
+
+
     if message.content.startswith('!주문'):
         
         curruntTime = datetime.datetime.now() + datetime.timedelta(hours = 9)
