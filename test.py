@@ -26,7 +26,7 @@ async def on_message(message):
     global creds #정산
     
 
-    if message.content.startswith('!주문'):
+    if message.content.startswith('!그레이드'):
         gc = gspread.authorize(creds)
         wks = gc.open('오전재고').worksheet('그레이드')
         result = wks.acell('B1').value
