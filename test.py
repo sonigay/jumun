@@ -37,7 +37,7 @@ async def on_message(message):
             )
         embed2 = discord.Embed(
             title = ' 파트너 그레이드 조회!! ',
-            description= '```' "출력자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
+            description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
             color=0x00ffff
             )
         await client.send_message(client.get_channel("674827771817623572"), embed=embed2)	
