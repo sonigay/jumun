@@ -20,6 +20,16 @@ async def on_ready():
     print(client.user.id)
     print("----------------")
     await client.change_presence(game=discord.Game(name='메세지 전달', type=1))
+
+
+@client.event
+async def on_member_join(member):
+    fmt = '{1.name} 에 오신것을 환영합니다., {0.mention} 님!! \n매장이름/직급/성함/연락처 이렇게 남겨주시면 확인후 권한을 승인해드리겠습니다. '
+    channel = member.server.get_channel("661832869521391646")
+    await client.send_message(channel, fmt.format(member, member.server))
+
+
+
 @client.event
 async def on_message(message):
     global gc #정산
