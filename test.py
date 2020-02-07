@@ -93,7 +93,7 @@ async def on_message(message):
 	
 	
 	
-    if message.content.startswith('!공지'):
+    if message.content.startswith('!공지') and message.author.id = "315237238940106754":
         embed = discord.Embed(    
             title = "📌 공지사항",
             description= '```' + message.content[4:] + '```',
