@@ -28,6 +28,7 @@ async def on_member_join(member):
     channel = member.server.get_channel("661832869521391646")
         for i in range(2, 0, -1):
             await client.send_message(channel, "")
+            time.sleep(1)
         else:
             await client.send_message(channel, +str(i)+ fmt.format(member, member.server))
 
