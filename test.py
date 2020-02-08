@@ -30,7 +30,7 @@ async def on_member_join(member):
             await client.send_message(channel, "")
             time.sleep(1)
         else:
-            await client.send_message(channel, +str(i)+ fmt.format(member, member.server))
+            await client.send_message(channel, fmt.format(member, member.server))
 
 
 
