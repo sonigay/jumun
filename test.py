@@ -171,7 +171,7 @@ async def on_message(message):
 
     if message.content == '!정책표':
         command_list = ''
-        command_list += 'https://docs.google.com/spreadsheets/d/1hL4uvq2On11zp-_JWoWMG0Gyyuty5Lhvp_gQkfTYsOI/pubhtml#'     #!링크
+        command_list += 'https://docs.google.com/spreadsheets/d/1Cswb2jvY6Rr4sER6m4zfVm3RGYd3iwmv9K2KQ2vLmWg/pubhtml#'     #!링크
         embed1 = discord.Embed(
             title = ":bar_chart: 정책표링크",
             description= command_list,
