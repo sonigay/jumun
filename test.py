@@ -177,7 +177,7 @@ async def on_message(message):
         command_list += '엑셀다운 링크\n'
         command_list += 'https://docs.google.com/spreadsheets/d/1gGOqkMcSau3lXHnP5_UZfEW1rbJOi5czd3w-22QX2j4/pub?output=xlsx \n'     #!링크	
         embed1 = discord.Embed(
-            title = ":bar_chart: 정책표링크",
+            title = ":bar_chart: 정책표",
             description= command_list,
             color=0xf29886
             )
