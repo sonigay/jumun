@@ -171,7 +171,11 @@ async def on_message(message):
 
     if message.content == '!정책표':
         command_list = ''
-        command_list += 'https://docs.google.com/spreadsheets/d/1Cswb2jvY6Rr4sER6m4zfVm3RGYd3iwmv9K2KQ2vLmWg/pubhtml#'     #!링크
+        command_list += '웹사이트 링크\n'
+        command_list += 'https://docs.google.com/spreadsheets/d/1gGOqkMcSau3lXHnP5_UZfEW1rbJOi5czd3w-22QX2j4/pubhtml# \n'     #!링크
+        command_list += '\n'
+        command_list += '엑셀다운 링크\n'
+        command_list += 'https://docs.google.com/spreadsheets/d/1gGOqkMcSau3lXHnP5_UZfEW1rbJOi5czd3w-22QX2j4/pub?output=xlsx \n'     #!링크	
         embed1 = discord.Embed(
             title = ":bar_chart: 정책표링크",
             description= command_list,
