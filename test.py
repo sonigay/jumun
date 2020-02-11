@@ -94,12 +94,12 @@ async def on_message(message):
 	
         embed = discord.Embed(
             title = "주문내용",
-            description= '```' + neyong + '```',
+            description= '```fix\n' + neyong + '```',
             color=0xFF0000
             )
         embed.add_field(
             name = message.author.display_name + "님 답변",
-            value= '```' + dab + '```'
+            value= '```diff\n' + '-' + dab + '```'
 	    )
         await client.send_message(member, embed=embed)
 	
