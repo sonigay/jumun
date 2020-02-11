@@ -182,6 +182,10 @@ async def on_message(message):
             description= command_list,
             color=0xf29886
             )
+        embed.add_field(
+            name="❗ 주의사항 ",
+            value= '```위 엔드정책은 참고용입니다. \n정산은 폰클에서 그레이드 합산후 날짜별로 구두추가하시고 \n맞추셔야하십니다.감사합니다.\n```'
+            )
         embed2 = discord.Embed(
             title = ":bar_chart: 정책표출력!!",
             description= '```' "출력자:" + message.author.display_name +"\n거래처:" + message.channel.name + '```',
