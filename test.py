@@ -65,12 +65,12 @@ async def on_message(message):
         wks.insert_row([krnow, message.channel.name, message.author.display_name, message.content[4:]], 3)
         embed1 = discord.Embed(
             title = message.author.display_name + "님 의 주문 ",
-            description= '```' + message.content[4:] + '```',
+            description= '```fix\n' + message.content[4:] + '```',
             color=0xCBFF75
             )
         embed1.add_field(
             name=" 주문접수 확인... ",
-            value= '```주문내용이 전달되어 정상적으로\n접수되었습니다. 부득이한경우\n개인답변 드리겠습니다.```'
+            value= '```diff\n! 주문내용이 전달되어 정상적으로\n접수되었습니다. 부득이한경우\n개인답변 드리겠습니다.```'
             )
         embed2 = discord.Embed(
             title = message.author.display_name + "님 의 주문내용 ",
@@ -99,7 +99,7 @@ async def on_message(message):
             )
         embed.add_field(
             name = message.author.display_name + "님 답변",
-            value= '```diff\n' + '-' + dab + '```'
+            value= '```Tex\n' + '$' + dab + '```'
 	    )
         await client.send_message(member, embed=embed)
 	
