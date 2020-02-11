@@ -70,7 +70,7 @@ async def on_message(message):
             )
         embed1.add_field(
             name=" 주문접수 확인... ",
-            value= '```diff\n! 주문내용이 전달되어 정상적으로\n접수되었습니다. 부득이한경우\n개인답변 드리겠습니다.```'
+            value= '```diff\n!주문내용이 전달되어 정상적으로\n!접수되었습니다. 부득이한경우\n!개인답변 드리겠습니다.```'
             )
         embed2 = discord.Embed(
             title = message.author.display_name + "님 의 주문내용 ",
