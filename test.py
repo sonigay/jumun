@@ -44,7 +44,7 @@ async def on_message(message):
         result = wks.acell('B1').value
         embed1 = discord.Embed(
             title = ' 파트너 그레이드 안내!! ',
-            description= '```' + result + ' ```',
+            description= '**```css\n' + result + ' ```**',
             color=0x7fffd4
             )
         embed2 = discord.Embed(
