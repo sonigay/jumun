@@ -198,7 +198,7 @@ async def on_message(message):
         if message.channel.id == int("678131767521312802"):	
             embed = discord.Embed(
                 title = "❗ 주의사항 ",
-                description= '```diff\n-위 엔드정책은 참고용입니다. \n-정산은 폰클 정책표에서 그레이드 합산후 날짜별로 구두추가하시고 \n-맞추셔야하십니다.감사합니다.\n-폰클단가표 보는법은 앞자리 2빼고 뒷두자리 입니다.\n-그레이드확인은 "!그레이드" 로 확인 가능하십니다..```,
+                description= '```diff\n-위 엔드정책은 참고용입니다. \n-정산은 폰클 정책표에서 그레이드 합산후 날짜별로 구두추가하시고 \n-맞추셔야하십니다.감사합니다.\n-폰클단가표 보는법은 앞자리 2빼고 뒷두자리 입니다.\n-그레이드확인은 "!그레이드" 로 확인 가능하십니다..```',
                 color=0xf29886
                 )
             await client.send_message(client.get_channel(message.channel.id), embed=embed)
