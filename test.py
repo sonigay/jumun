@@ -194,7 +194,7 @@ async def on_message(message):
         await client.send_message(client.get_channel("672022974223876096"), embed=embed2)
         await client.send_message(message.channel, embed=embed1)
 	
-    if message.content == ' ':
+    if message.content.startswith(''):
         if message.channel.id == int("678131767521312802"):	
             embed = discord.Embed(
                 title = "❗ 주의사항 ",
