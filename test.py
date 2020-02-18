@@ -167,43 +167,6 @@ async def on_message(message):
              await client.send_message(client.get_channel("667247472908828676"), embed=embed)
              await client.send_message(client.get_channel("667247519264407552"), embed=embed)
              await client.send_message(client.get_channel("667247545893781524"), embed=embed)
- 	
-
-    if message.content == '!정책표':
-        command_list = ''
-        command_list += '\n'
-        command_list += '웹사이트 링크\n'
-        command_list += 'https://docs.google.com/spreadsheets/d/1gGOqkMcSau3lXHnP5_UZfEW1rbJOi5czd3w-22QX2j4/pubhtml# \n'     #!링크
-        command_list += '\n'
-        command_list += '엑셀다운 링크\n'
-        command_list += 'https://docs.google.com/spreadsheets/d/1gGOqkMcSau3lXHnP5_UZfEW1rbJOi5czd3w-22QX2j4/pub?output=xlsx \n'     #!링크	
-        embed1 = discord.Embed(
-            title = ":bar_chart: 정책표",
-            description= command_list,
-            color=0xf29886
-            )
-        embed1.add_field(
-            name="❗ 주의사항 ",
-            value= '```diff\n-위 엔드정책은 참고용입니다. \n-정산은 폰클 정책표에서 그레이드 합산후 날짜별로 구두추가하시고 \n-맞추셔야하십니다.감사합니다.\n-폰클단가표 보는법은 앞자리 2빼고 뒷두자리 입니다.\n-그레이드확인은 "!그레이드" 로 확인 가능하십니다..```'
-            )
-        embed2 = discord.Embed(
-            title = ":bar_chart: 정책표출력!!",
-            description= '```' "출력자:" + message.author.display_name +"\n거래처:" + message.channel.name + '```',
-            color=0xf29886
-            )
-        await client.send_message(client.get_channel("672022974223876096"), embed=embed2)
-        await client.send_message(message.channel, embed=embed1)
-	
-#    if message.content.startswith(''):
- #       if message.channel == "678131767521312802":
-  #          message.channel.id = "678131767521312802"
-   #         embed = discord.Embed(
-    #            title = "❗ 주의사항 ",
-     #           description= '```diff\n-위 엔드정책은 참고용입니다. \n-정산은 폰클 정책표에서 그레이드 합산후 날짜별로 구두추가하시고 \n-맞추셔야하십니다.감사합니다.\n-폰클단가표 보는법은 앞자리 2빼고 뒷두자리 입니다.\n-그레이드확인은 "!그레이드" 로 확인 가능하십니다..```',
-      #          color=0xf29886
-       #         )
-        #    await client.send_message(client.get_channel(message.channel.id), embed=embed)
-	
 
  
                         
