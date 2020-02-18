@@ -52,8 +52,8 @@ async def on_message(message):
             description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
             color=0x00ffff
             )
-        await client.send_message(client.get_channel("674827771817623572"), embed=embed2)	
         await client.send_message(message.channel, embed=embed1)
+        await client.send_message(client.get_channel("674827771817623572"), embed=embed2)
 
 
     if message.content.startswith('!주문'):
